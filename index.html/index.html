@@ -3,6 +3,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Optional Bootstrap Icons (for carousel arrows) -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom CSS (if any) -->
   <link rel="preload" href="https://assets.market-storefront.envato-static.com/storefront/assets/styles-d669c82334b4ac8a40afce210a4d5d51de45321fa5c4059e62b3b87ef7cf7a11.css" as="style" type="text/css">
   <link rel="preload" href="https://graphicriver.img.customer.envatousercontent.com/files/250564981/Online-Order-Customer-Purchase-AurielAki-590.jpg?auto=compress%2Cformat&amp;fit=crop&amp;crop=top&amp;w=590&amp;h=590&amp;s=ccb1506e0a7885621dc26f1336371f15" as="image">
 <link rel="stylesheet" href="https://assets.market-storefront.envato-static.com/storefront/assets/styles-d669c82334b4ac8a40afce210a4d5d51de45321fa5c4059e62b3b87ef7cf7a11.css" media="all" data-turbo-track="reload" />
@@ -64,9 +69,13 @@
 
   <meta name="csrf-param" content="authenticity_token" />
   <meta name="csrf-token">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   
   
   <link rel="next" href="/online+ordering-in-graphics/pg-2" />
+  
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  
   <style>
     .shared-global_header-markets_nav_component__siteLink {
         margin-right: 0px; /* Adjust the value to control the gap size */
@@ -2861,7 +2870,123 @@ window.ga('set', 'dimension19', 'Market Storefront');
 
 </div>-->
 
+   
+    
 
+<div class="main-contain">
+  <div class="image-container">
+    <div class="swiper-slide">
+      <img src="image/5.jpg" alt="Artist contemplating" style="width: 300px; height: 300px;">
+    </div>
+    <div class="swiper-slide">
+      <img src="image/6.jpg" alt="Side view man designing websites" style="width: 300px; height: 300px;">
+    </div>
+    <div class="swiper-slide">
+      <img src="image/7.jpg" alt="Untitled 2" style="width: 300px; height: 300px;">
+    </div>
+    <div class="swiper-slide">
+      <img src="image/8.jpg" alt="Untitled 2" style="width: 300px; height: 300px;">
+    </div>
+  </div>
+</div>
+
+
+<div class="main">
+  <div class="right">
+    <img src="image/1.jpg" alt="">
+  </div>
+  <div class="right">
+    <img src="image/2.jpg" alt="">
+  </div>
+  <div class="right">
+    <img src="image/3.jpg" alt="">
+  </div>
+  <div class="right">
+    <img src="image/4.png" alt="">
+  </div>
+</div>
+<style>
+  .main {
+    display: flex;
+    
+  }
+
+  .right {
+    margin: 0 10px; /* Adjust margin between images */
+    width: 300px; /* Set the width of each image container */
+    height: 300px; /* Set the height of each image container */
+    overflow: hidden; /* Hide any overflow from the image */
+  }
+
+  .right img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    object-position: center; /* Center the image within the container */
+    display: block; /* Ensure the image behaves like a block element */
+    border-radius: 8px; /* Example: Adding border radius */
+  }
+
+
+  
+</style>
+
+
+
+
+
+
+
+
+  <style>
+  .main-contain {
+    max-width: 100%; /* Limiting the maximum width */
+    margin: 0 auto; /* Centering the container */
+    overflow: hidden; /* Hide overflow to prevent scrollbars */
+    white-space: nowrap; /* Prevent items from wrapping */
+    position: relative; /* Ensure the container has a position */
+  }
+
+  .image-container {
+    display: flex; /* Display as flex container */
+    animation: scroll 5s linear infinite; /* Adjust duration based on your needs */
+  }
+
+  .swiper-slide {
+    width: 300px; /* Adjust based on your design */
+    margin-right: 10px; /* Adjust spacing between slides */
+    text-align: center; /* Center images horizontally */
+    padding: 5px;
+  }
+
+  .swiper-slide:last-child {
+    margin-right: 0; /* Remove margin from the last slide */
+  }
+
+  .swiper-slide img {
+    max-width: 100%; /* Make images responsive */
+    height: 100%; /* Maintain aspect ratio */
+    display: block; /* Ensure images are block-level elements */
+    border-radius: 8px; /* Example: Adding border radius */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Example: Adding shadow */
+  }
+  @keyframes scroll {
+    0% {
+      margin-left: 100%; /* Start scrolling from the right edge */
+    }
+    100% {
+      margin-left: -0px; /* Scroll to the left edge, adjust based on slide width */
+    }
+  }
+  
+</style>
+
+
+
+
+
+  
+  
 
 
 
@@ -9049,7 +9174,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
             <picture>
               <!--<source srcset="https://assets.market-storefront.envato-static.com/storefront/assets/footer/cross-sell-elements-b0c560ebbdc140f552ca932909a4848bebcf59165e97810230e120fb23743ac8.avif" type="image/avif">
               <source srcset="https://assets.market-storefront.envato-static.com/storefront/assets/footer/cross-sell-elements-40862b626a62484d6d3230609f2b03a3ec1ce900da841a708e7095a4bdffa642.webp" type="image/webp">-->
-              <img src="image/Untitled design (1) (1).png"
+              <img src="image/image-YZ-iaRUVE-transformed.png"
                    loading="lazy"
                    alt="Vibrant Visions"
                    width="600" height="300"
@@ -9058,13 +9183,13 @@ window.ga('set', 'dimension19', 'Market Storefront');
             
             <figcaption class="shared-global_footer-cross_sell_component__textContainer">
               <p class="shared-global_footer-cross_sell_component__title">
-                Millions of creative assets, unlimited downloads.
+              Unleashing creativity through innovative and impactful visual designs.
               </p>
-              <p class="shared-global_footer-cross_sell_component__subtitle">
+              <!--<p class="shared-global_footer-cross_sell_component__subtitle">
                 <small class="shared-global_footer-cross_sell_component__text">
                   One low cost subscription. Cancel any time.
                 </small>
-              </p>
+              </p>-->
             </figcaption>
           </figure>
         </a>
@@ -9090,14 +9215,13 @@ window.ga('set', 'dimension19', 'Market Storefront');
             </picture>
             <figcaption class="shared-global_footer-cross_sell_component__textContainer">
               <p class="shared-global_footer-cross_sell_component__title">
-                Effortless design and video. <br />
-                Made online by you.
+                Transforming ideas into stunning visuals with cutting-edge graphic design.
               </p>
-              <p class="shared-global_footer-cross_sell_component__subtitle">
+              <!--<p class="shared-global_footer-cross_sell_component__subtitle">
                 <small class="shared-global_footer-cross_sell_component__text">
                   Smart templates ready for any skill level.
                 </small>
-              </p>
+              </p>-->
             </figcaption>
           </figure>
         </a>
@@ -9269,11 +9393,13 @@ window.ga('set', 'dimension19', 'Market Storefront');
                src="https://assets.market-storefront.envato-static.com/storefront/assets/logos/bcorp-fbdd18d9fd7274a0e6591e67408e26c55df20358c3c4eee496117b16874e1749.svg" />
           </a>
       </div>-->
+
+      
     </div>
   </div>
   <div class="shared-global_footer-footer_component__bottomContainer">
     <nav class="shared-global_footer-footer_component__bottomSocial" itemscope itemtype="http://schema.org/Organization" aria-label="social">
-        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Twitter" href="http://127.0.0.1:5500/index.html/index.html">          <img loading="lazy" alt="Twitter" title="Twitter" src="https://assets.market-storefront.envato-static.com/storefront/assets/social-icons/icon-twitter-6ad889010d07b5b6caa1e8c40d71131641bb97d9605ef8ef62d8cfe8ace6a817.svg" width="22" height="22" /></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Facebook" href="https://www.facebook.com/envato">          <img loading="lazy" alt="Facebook" title="Facebook" src="https://assets.market-storefront.envato-static.com/storefront/assets/social-icons/icon-facebook-e29111786aec8117c019d01a351887605c22c29dd9c363b355789c06436aaf2f.svg" width="22" height="22" /></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="YouTube" href="https://www.youtube.com/user/Envato">          <img loading="lazy" alt="YouTube" title="YouTube" src="https://assets.market-storefront.envato-static.com/storefront/assets/social-icons/icon-youtube-6a45b3f582b34fb83cf3d2a4600f50f0c4431309a4434f853eac416be16aa37c.svg" width="22" height="22" /></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Instagram" href="https://www.instagram.com/envato/">          <img loading="lazy" alt="Instagram" title="Instagram" src="https://assets.market-storefront.envato-static.com/storefront/assets/social-icons/icon-instagram-614e390114cada173d0094549cb1f260929b6432d3a1e6cff484302e4aabba09.svg" width="22" height="22" /></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Pinterest" href="https://www.pinterest.com/envato/">          <img loading="lazy" alt="Pinterest" title="Pinterest" src="https://assets.market-storefront.envato-static.com/storefront/assets/social-icons/icon-pinterest-bb3b4207aa129cfef2e6fc210119c48c132ddb3a3a0c4c06c0acc128201128b7.svg" width="22" height="22" /></a>    </nav>
+        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="linkid" href="http://127.0.0.1:5500/index.html/index.html">                  <img loading="lazy" alt="Facebook" title="Facebook" src="image/linked.png" width="35" height="35"/></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Be" href="https://www.behance.net/rahulprajapat45">          <img loading="lazy" alt="Be" title="Be" src="image/be.png" width="35" height="35" /></a>        <a class="shared-global_footer-footer_component__socialLink" rel="nofollow" aria-label="Instagram" href="https://www.instagram.com/envato/">          <img loading="lazy" alt="Instagram" title="Instagram" src="image/instgram.png" width="35" height="35" /></a></nav>
     <div class="shared-global_footer-footer_component__bottomLinks">
       <nav class="shared-global_footer-footer_component__companyLinks" aria-label="company">
           <a class="shared-global_footer-footer_component__companyLink" data-action="analytics-event#send" data-analytics-event="{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;footer nav&quot;,&quot;eventAction&quot;:&quot;click;a&quot;,&quot;eventLabel&quot;:&quot;Envato.com&quot;}" href="http://127.0.0.1:5500/index.html/index.html">Envato.com</a>
@@ -9384,6 +9510,8 @@ window.ga('set', 'dimension19', 'Market Storefront');
     </a>
   </div>
 </div>
-
+ <!-- Bootstrap Bundle with Popper.js (if needed for dropdowns, tooltips, etc.) -->
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
 </body>
 </html>
