@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Optional Bootstrap Icons (for carousel arrows) -->
@@ -2873,7 +2874,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
    
     
 
-<div class="main-contain">
+<div class="main-contain" style="background-color:#121212; background-image: url(image/main-img/image-bg.jpg);">
   <div class="image-container">
     <div class="swiper-slide">
       <img src="image/5.jpg" alt="Artist contemplating" style="width: 300px; height: 300px;">
@@ -2888,57 +2889,66 @@ window.ga('set', 'dimension19', 'Market Storefront');
       <img src="image/8.jpg" alt="Untitled 2" style="width: 300px; height: 300px;">
     </div>
   </div>
+  <div class="main">
+    <div class="right">
+      <img src="image/1.jpg" alt="">
+    </div>
+    <div class="right">
+      <img src="image/2.jpg" alt="">
+    </div>
+    <div class="right">
+      <img src="image/3.jpg" alt="">
+    </div>
+    <div class="right">
+      <img src="image/4.png" alt="">
+    </div>
+  </div>
 </div>
 
 
-<div class="main">
-  <div class="right">
-    <img src="image/1.jpg" alt="">
-  </div>
-  <div class="right">
-    <img src="image/2.jpg" alt="">
-  </div>
-  <div class="right">
-    <img src="image/3.jpg" alt="">
-  </div>
-  <div class="right">
-    <img src="image/4.png" alt="">
-  </div>
-</div>
+
 <style>
   .main {
-    display: flex;
-    
+  display: flex;
+  overflow: hidden; /* Hide any overflow to prevent scrollbars */
+}
+
+.right {
+  margin: 0 10px; /* Adjust margin between images */
+  width: 300px; /* Set the width of each image container */
+  height: 300px; /* Set the height of each image container */
+  overflow: hidden; /* Hide any overflow from the image */
+  margin-bottom: 5px;
+}
+
+.right img {
+  width: 100%; /* Ensure the image fills its container */
+  height: 100%; /* Ensure the image fills its container */
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+  object-position: center; /* Center the image within the container */
+  display: block; /* Ensure the image behaves like a block element */
+  border-radius: 8px; /* Example: Adding border radius */
+}
+
+/* Animation for scrolling left to right */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
   }
-
-  .right {
-    margin: 0 10px; /* Adjust margin between images */
-    width: 300px; /* Set the width of each image container */
-    height: 300px; /* Set the height of each image container */
-    overflow: hidden; /* Hide any overflow from the image */
+  100% {
+    transform: translateX(calc(100% + 20px)); /* Adjust based on container width and margin */
   }
+}
 
-  .right img {
-    width: 100%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover; /* Maintain aspect ratio and cover the container */
-    object-position: center; /* Center the image within the container */
-    display: block; /* Ensure the image behaves like a block element */
-    border-radius: 8px; /* Example: Adding border radius */
-  }
-
-
-  
+/* Apply the animation to .main */
+.main {
+  animation: scrollLeft 5s linear infinite; /* Adjust duration based on your needs */
+}
 </style>
 
 
 
-
-
-
-
-
-  <style>
+<style>
   .main-contain {
     max-width: 100%; /* Limiting the maximum width */
     margin: 0 auto; /* Centering the container */
@@ -2948,20 +2958,23 @@ window.ga('set', 'dimension19', 'Market Storefront');
   }
 
   .image-container {
-    display: flex; /* Display as flex container */
-    animation: scroll 5s linear infinite; /* Adjust duration based on your needs */
-  }
+  display: flex;
+  overflow: hidden; /* Hide overflow to prevent scrollbars */
+  animation: scroll 5s linear infinite; /* Adjust duration based on your needs */
+}
 
-  .swiper-slide {
-    width: 300px; /* Adjust based on your design */
-    margin-right: 10px; /* Adjust spacing between slides */
-    text-align: center; /* Center images horizontally */
-    padding: 5px;
-  }
 
-  .swiper-slide:last-child {
-    margin-right: 0; /* Remove margin from the last slide */
-  }
+.swiper-slide {
+  width: 300px; /* Adjust based on your design */
+  margin-right: 10px; /* Adjust spacing between slides */
+  text-align: center; /* Center images horizontally */
+  padding: 5px;
+}
+
+.swiper-slide:last-child {
+  margin-right: 0; /* Remove margin from the last slide */
+}
+
 
   .swiper-slide img {
     max-width: 100%; /* Make images responsive */
@@ -2971,13 +2984,14 @@ window.ga('set', 'dimension19', 'Market Storefront');
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Example: Adding shadow */
   }
   @keyframes scroll {
-    0% {
-      margin-left: 100%; /* Start scrolling from the right edge */
-    }
-    100% {
-      margin-left: -0px; /* Scroll to the left edge, adjust based on slide width */
-    }
+  0% {
+    transform: translateX(100%); /* Start scrolling from the right edge */
   }
+  100% {
+    transform: translateX(-100%); /* Scroll to the left edge */
+  }
+}
+
   
 </style>
 
@@ -3897,7 +3911,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/miscellaneous"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview" data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4070,7 +4084,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/characters/people"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4241,7 +4255,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/characters/people"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview" data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4412,7 +4426,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/objects/man-made-objects"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4583,7 +4597,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/computers"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4754,7 +4768,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/characters/people"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -4925,7 +4939,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/web"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5096,7 +5110,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/characters/people"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5267,7 +5281,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/icons/technology"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5441,7 +5455,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/communications"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5615,7 +5629,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/communications"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5789,7 +5803,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/web"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
@@ -5960,12 +5974,12 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/commercial-shopping/services"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview" data-aos="fade-up">
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
 >
-  <a class="shared-item_cards-preview_image_component__imageLink" data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;aurielaki&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/commercial-shopping/services&quot;,&quot;id&quot;:26207873,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Courier Service Posting Online Order&quot;,&quot;position&quot;:13}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:26207873}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:26207873,&quot;itemName&quot;:&quot;Courier Service Posting Online Order&quot;,&quot;itemBrand&quot;:&quot;aurielaki&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;commercial-shopping&quot;,&quot;price&quot;:&quot;6.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/courier-service-posting-online-order/26207873">
+  <a class="shared-item_cards-preview_image_component__imageLink"   data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;aurielaki&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/commercial-shopping/services&quot;,&quot;id&quot;:26207873,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Courier Service Posting Online Order&quot;,&quot;position&quot;:13}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:26207873}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:26207873,&quot;itemName&quot;:&quot;Courier Service Posting Online Order&quot;,&quot;itemBrand&quot;:&quot;aurielaki&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;commercial-shopping&quot;,&quot;price&quot;:&quot;6.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/courier-service-posting-online-order/26207873">
       <img src="image/main-img/a15.png"
         loading="lazy"
         style="left: 0%"
@@ -6134,12 +6148,12 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview" data-aos="fade-up">
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
 >
-  <a class="shared-item_cards-preview_image_component__imageLink" data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;slabdsgn&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual&quot;,&quot;id&quot;:27574823,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order Concept Flat Illustration&quot;,&quot;position&quot;:14}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:27574823}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:27574823,&quot;itemName&quot;:&quot;Online Order Concept Flat Illustration&quot;,&quot;itemBrand&quot;:&quot;slabdsgn&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:null,&quot;price&quot;:&quot;7.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/online-order-concept-flat-illustration/27574823">
+  <a class="shared-item_cards-preview_image_component__imageLink"   data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;slabdsgn&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual&quot;,&quot;id&quot;:27574823,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order Concept Flat Illustration&quot;,&quot;position&quot;:14}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:27574823}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:27574823,&quot;itemName&quot;:&quot;Online Order Concept Flat Illustration&quot;,&quot;itemBrand&quot;:&quot;slabdsgn&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:null,&quot;price&quot;:&quot;7.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/online-order-concept-flat-illustration/27574823">
       <img src="image/main-img/a16.png"
         loading="lazy"
         style="left: 0%"
@@ -6308,12 +6322,12 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/web"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview" data-aos="fade-up">
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
 >
-  <a class="shared-item_cards-preview_image_component__imageLink" data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;-TAlex-&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/technology/web&quot;,&quot;id&quot;:26876005,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order and Delivery Service&quot;,&quot;position&quot;:15}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:26876005}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:26876005,&quot;itemName&quot;:&quot;Online Order and Delivery Service&quot;,&quot;itemBrand&quot;:&quot;-TAlex-&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;technology&quot;,&quot;price&quot;:&quot;3.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/online-order-and-delivery-service/26876005">
+  <a class="shared-item_cards-preview_image_component__imageLink"  data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;-TAlex-&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/technology/web&quot;,&quot;id&quot;:26876005,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order and Delivery Service&quot;,&quot;position&quot;:15}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:26876005}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:26876005,&quot;itemName&quot;:&quot;Online Order and Delivery Service&quot;,&quot;itemBrand&quot;:&quot;-TAlex-&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;technology&quot;,&quot;price&quot;:&quot;3.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/online-order-and-delivery-service/26876005">
       <img src="image/main-img/a17.png"
         loading="lazy"
         style="left: 0%"
@@ -6479,13 +6493,19 @@ window.ga('set', 'dimension19', 'Market Storefront');
      data-site="graphicriver"
      data-impression-category="graphicriver.net/vectors/conceptual/technology/web"
 >
-  <div class="shared-item_cards-grid-image_card_component__preview">
+  <div class="shared-item_cards-grid-image_card_component__preview"  data-aos="fade-up" >
     <div class="shared-item_cards-grid-image_card_component__imageWrapper">
       <div class="shared-item_cards-preview_image_component__carousel shared-item_cards-preview_image_component__singleImage"
   style="padding-bottom: 100.0%"
 >
-  <a class="shared-item_cards-preview_image_component__imageLink" data-turbo="false" data-action="analytics-event#send" data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;-TAlex-&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/technology/web&quot;,&quot;id&quot;:27169283,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order and Delivery Service&quot;,&quot;position&quot;:16}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:27169283}]]" data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:27169283,&quot;itemName&quot;:&quot;Online Order and Delivery Service&quot;,&quot;itemBrand&quot;:&quot;-TAlex-&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;technology&quot;,&quot;price&quot;:&quot;3.00&quot;,&quot;quantity&quot;:1}]}}" href="https://graphicriver.net/item/online-order-and-delivery-service/27169283">
-      <img src="image/main-img/a18.png"
+<a class="shared-item_cards-preview_image_component__imageLink"
+  
+   data-turbo="false" 
+   data-action="analytics-event#send" 
+   data-analytics-event="[[&quot;ec:addProduct&quot;,{&quot;brand&quot;:&quot;-TAlex-&quot;,&quot;category&quot;:&quot;graphicriver.net/vectors/conceptual/technology/web&quot;,&quot;id&quot;:27169283,&quot;list&quot;:&quot;Search Results: Search&quot;,&quot;name&quot;:&quot;Online Order and Delivery Service&quot;,&quot;position&quot;:16}],[&quot;ec:setAction&quot;,&quot;click&quot;,{&quot;list&quot;:&quot;Search Results: Search&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Ecommerce&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;Product click: product list&quot;}],[&quot;send&quot;,{&quot;hitType&quot;:&quot;event&quot;,&quot;eventCategory&quot;:&quot;Item Card&quot;,&quot;eventAction&quot;:&quot;click&quot;,&quot;eventLabel&quot;:&quot;image&quot;,&quot;eventValue&quot;:27169283}]]" 
+   data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_item&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;ecommerce&quot;:{&quot;currency&quot;:&quot;USD&quot;,&quot;items&quot;:[{&quot;affiliation&quot;:&quot;graphicriver&quot;,&quot;itemId&quot;:27169283,&quot;itemName&quot;:&quot;Online Order and Delivery Service&quot;,&quot;itemBrand&quot;:&quot;-TAlex-&quot;,&quot;itemCategory&quot;:&quot;vectors&quot;,&quot;itemCategory2&quot;:&quot;conceptual&quot;,&quot;itemCategory3&quot;:&quot;technology&quot;,&quot;price&quot;:&quot;3.00&quot;,&quot;quantity&quot;:1}]}}" 
+   href="https://graphicriver.net/item/online-order-and-delivery-service/27169283">
+   <img src="image/main-img/a18.png" 
         loading="lazy"
         style="left: 0%"
         class="shared-item_cards-preview_image_component__image"
@@ -6497,8 +6517,10 @@ window.ga('set', 'dimension19', 'Market Storefront');
         data-action="error->image-preview#setFallback"
         data-fallback="https://previews.customer.envatousercontent.com/files/293562254/Business-2595-prw.jpg"
         data-carousel-target="image"
-      />
-</a></div>
+   />
+</a>
+
+</div>
 
     </div>
       
@@ -6636,6 +6658,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
 </div>
 
 </div>
+
 
     <!--<div class="shared-item_cards-card_component__root">
   <div class="shared-item_cards-grid-image_card_component__root"
@@ -9125,9 +9148,11 @@ window.ga('set', 'dimension19', 'Market Storefront');
          
          <div
   class="search-place_it_promotion_banner_component__root search-place_it_promotion_banner_component__grBackground" data-nosnippet
+  data-aos="fade-up"
 >
   <div class="search-place_it_promotion_banner_component__copyWrapper">
-    <div class="search-place_it_promotion_banner_component__content">
+    <img src="image/main-img/a23.jpg" alt="" style="height: 253px;">
+    <!--<div class="search-place_it_promotion_banner_component__content">
       <img
         loading="lazy"
         alt="PlaceIt Vibrant VisionsLogo"
@@ -9143,7 +9168,7 @@ window.ga('set', 'dimension19', 'Market Storefront');
       <a class="search-place_it_promotion_banner_component__button" href="http://127.0.0.1:5500/index.html/index.html">
         Create a Design Online
       </a>
-    </div>
+    </div>-->
   </div>
 </div>
       </main>
@@ -9158,12 +9183,13 @@ window.ga('set', 'dimension19', 'Market Storefront');
 
 
   <div class="shared-global_footer-cross_sell_component__root" data-nosnippet>
-  <div class="shared-global_footer-cross_sell_component__gridContainer">
+  <div class="shared-global_footer-cross_sell_component__gridContainer" data-aos="fade-up">
     <ul class="shared-global_footer-cross_sell_component__list">
       <li class="shared-global_footer-cross_sell_component__listItem">
         <a
           href="http://127.0.0.1:5500/index.html/index.html"
           class="shared-global_footer-cross_sell_component__link"
+          
           data-impression-tracker-target="promotion"
           data-analytics-view-payload="{&quot;eventName&quot;:&quot;view_promotion&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;contextDetail&quot;:&quot;footer block ads&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-footer_18JULY2022&quot;,&quot;promotionName&quot;:&quot;elements_mkt-footer_18JULY2022&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}"
           data-analytics-click-payload="{&quot;eventName&quot;:&quot;select_promotion&quot;,&quot;eventType&quot;:&quot;user&quot;,&quot;contextDetail&quot;:&quot;footer block ads&quot;,&quot;ecommerce&quot;:{&quot;promotionId&quot;:&quot;elements_mkt-footer_18JULY2022&quot;,&quot;promotionName&quot;:&quot;elements_mkt-footer_18JULY2022&quot;,&quot;promotionType&quot;:&quot;elements referral&quot;}}"
@@ -9509,6 +9535,11 @@ window.ga('set', 'dimension19', 'Market Storefront');
     </a>
   </div>
 </div>
+<!-- Include AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init(); // Initialize AOS
+</script>
  <!-- Bootstrap Bundle with Popper.js (if needed for dropdowns, tooltips, etc.) -->
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
 </body>
